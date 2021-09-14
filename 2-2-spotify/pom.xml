@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cnj</groupId>
-	<artifactId>buildpacks-spring-boot-maven-plugin</artifactId>
+	<artifactId>spotify</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>buildpacks-spring-boot-maven-plugin</name>
+	<name>spotify</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -36,15 +36,25 @@
 
 	<build>
 		<plugins>
-
 			<plugin>
-				<groupId>com.google.cloud.tools</groupId>
-				<artifactId>jib-maven-plugin</artifactId>
-				<version>3.1.4</version>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.13</version>
+				<executions>
+					<execution>
+					<id>default</id>
+					<goals>
+						<goal>build</goal>
+					</goals>
+					</execution>
+				</executions>
 				<configuration>
-					<to>
-						<image>hk/jib</image>
-					</to>
+					<repository>${imageName}</repository> 
+					<!-- 
+					<repository>gcr.io/bootiful/spotify</repository> 
+				-->
+					<!-- <tag>${project.version}</tag> -->
+					<tag>latest</tag>
 				</configuration>
 			</plugin>
 			<plugin>

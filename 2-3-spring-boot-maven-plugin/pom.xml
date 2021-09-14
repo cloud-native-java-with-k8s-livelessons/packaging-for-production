@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cnj</groupId>
-	<artifactId>buildpacks-spring-boot-maven-plugin</artifactId>
+	<artifactId>spring-boot-maven-plugin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>buildpacks-spring-boot-maven-plugin</name>
+	<name>spring-boot-maven-plugin</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
