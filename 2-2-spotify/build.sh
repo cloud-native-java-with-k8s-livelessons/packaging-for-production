@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Using the Google Jib Maven plugin to build this image"
+echo "Using the Spotify Maven plugin to build this image"
 PREFIX=cnj
 IMAGE=spotify2
 IMAGE_NAME=$PREFIX/$IMAGE
